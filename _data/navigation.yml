@@ -24,9 +24,9 @@ main:
     url: #
     
   - title: "关于"
-    url: /cv/
+    url: /cv-json/
     
-  # - title: "CV"
+  # -title: "CV"
   #   url: /cv-json/
     
   - title: "交流"
