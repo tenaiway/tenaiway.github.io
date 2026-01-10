@@ -8,11 +8,11 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title:#
-    url:#
+  - title: #
+    url: #
 
-  - title:#
-    url:#
+  - title: #
+    url: #
 
   - title: #
     url: #
@@ -23,11 +23,11 @@ main:
   - title: #
     url: #
     
-  - title: "CV"
+  - title: "关于"
     url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
     
-  - title: "Guide"
+  - title: "交流"
     url: /markdown/
