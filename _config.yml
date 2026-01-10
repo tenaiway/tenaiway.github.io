@@ -22,8 +22,8 @@ url                      : https://tenaiway.github.io # The base hostname & prot
 author:
   # Biographic information
   avatar           : "profile.png"
-  bio              : "下面是下载栏目"
-  location         : "https://yun.139.com/shareweb/#/w/i/2su6BTVg6qe73"
+  bio              : #
+  location         : #
   employer         : #
   uri              : #
   email            : #
