@@ -22,11 +22,10 @@ url                      : https://tenaiway.github.io # The base hostname & prot
 author:
   # Biographic information
   avatar           : "profile.png"
-  pronouns         : "her"
-  bio              : "Short biography for the left-hand sidebar"
-  location         : ""
+  bio              : "下面是下载栏目"
+  location         : "https://yun.139.com/shareweb/#/w/i/2su6BTVg6qe73"
   employer         : "Red Brick University"
-  uri              : # URL
+  uri              : #
   email            : "none@example.org" 
 
   # Academic websites
