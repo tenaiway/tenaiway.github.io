@@ -8,6 +8,7 @@ redirect_from:
   - /markdown.html
 ---
 
+开发者：10点被甩一万，kk
 [wx赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bPx0.jpg)
 
 [zfb赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bC2q.jpg)
