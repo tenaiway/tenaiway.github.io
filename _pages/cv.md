@@ -50,9 +50,22 @@ v7a版本，适用于老手机👇
 **苹果专区**
 *注意：kelivo可在Apple Store搜索下载！*
 
+*不会下载的看下面👇的视频
+
+[点击播放视频](https://yun.139.com/shareweb/#/w/i/2su6xPBmxgh8q)
+
 10dianchat
 v1.0
 
 更新日志：无
 
 [点击下载](https://ykj-eos-dg5-01.eos-dongguan-6.cmecloud.cn/42f459fbebc848a98e54677450b0a646086?response-content-disposition=attachment;%20filename*=UTF-8%27%2710dianchat_%25E6%25AD%25A3%25E5%25BC%258F%25E7%2589%2588%25EF%25BC%2588%25E6%259C%25AA%25E7%25AD%25BE%25E5%2590%258D%25EF%25BC%2589.mobileconfig&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260111T050840Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=9T1UKBIX6OJSR5XN2F2T/20260111/default/s3/aws4_request&t=2&u=1039972746715434672&ot=personal&oi=1039972746715434672&f=FpAA-ZLrpDfvumuh4FaRK_bfpKgNJaR17&ext=eyJ1dCI6MX0=&X-Amz-Signature=fda97b439be6ccb33251bbd9dd4174e8a0c1d2f0f3851fc129738715646612db)
+
+10dianapi
+v1.0
+
+更新日志：无
+
+[点击下载](https://ykj-eos-dg5-01.eos-dongguan-6.cmecloud.cn/1ff7a1c0865e4ac2bdb40467af218288086?response-content-disposition=attachment;%20filename*=UTF-8%27%2710dianAPI_%25E6%25AD%25A3%25E5%25BC%258F%25E7%2589%2588%25EF%25BC%2588%25E6%259C%25AA%25E7%25AD%25BE%25E5%2590%258D%25EF%25BC%2589.mobileconfig&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260111T051625Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=9T1UKBIX6OJSR5XN2F2T/20260111/default/s3/aws4_request&t=2&u=1039972746715434672&ot=personal&oi=1039972746715434672&f=FpN0KMC-AozQx1vXy9HVGobc0HlfcALO0&ext=eyJ1dCI6MX0=&X-Amz-Signature=de3c01264f0d6dc4f7a4c6a2e2484bc596bbfdb6556776e346bbc0a82490eb00)
+
+
