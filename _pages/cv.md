@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "关于"
+title: "相关应用"
 permalink: /cv/
 author_profile: true
 redirect_from:
