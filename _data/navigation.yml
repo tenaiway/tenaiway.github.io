@@ -23,11 +23,11 @@ main:
   - title: #
     url: #
     
-  - title: "关于"
+  - title: "相关应用"
     url: /cv/
     
   # -title: "CV"
   #   url: /cv-json/
     
-  - title: "交流"
+  - title: "关于"
     url: /markdown/
