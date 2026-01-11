@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 开发者：10点被甩一万，kk
+
 [wx赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bPx0.jpg)
 
 [zfb赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bC2q.jpg)
@@ -26,8 +27,11 @@ redirect_from:
 
 
 欢迎加入我们的QQ群**1061994014**一起交流
+
 群里不定时会有抽奖福利^_^
-     tips：如果对10dianai有什么意见可以私信管理员或者群主哦
+
+tips：如果对10dianai有什么意见可以私信管理员或者群主哦
+     
 
 <div style="text-align: center; margin: 2em 0;">
 <img src="https://s41.ax1x.com/2026/01/11/pZ0HBE4.jpg"
