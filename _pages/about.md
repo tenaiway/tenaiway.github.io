@@ -47,7 +47,13 @@ tips:
 *10dian-film*
 
 10点传文件，拥有“取件码”特色功能
-
+<div style="text-align: center; margin: 2em 0;">
+<img src="https://s41.ax1x.com/2026/01/11/pZ0qtmT.jpg"
+     alt="profile photo"
+     width="200"
+     height="200"
+     style="object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+</div>
 (目前该网站的https证书有问题,访问网站时可能会提示”连接不安全”等问题,请等待后续修复qwq）
 
 [点击跳转awa](https://bp.10dian-ai.top)
