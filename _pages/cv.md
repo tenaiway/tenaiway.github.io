@@ -48,4 +48,11 @@ v7a版本，适用于老手机👇
 [v7a版下载](https://release-assets.githubusercontent.com/github-production-release-asset/1046807713/7a8fc5b7-184c-43cd-95b3-11c0a7810da3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-01-11T05:52:20Z&rscd=attachment;%20filename=Kelivo_android_1.1.6%2b23_armeabi-v7a.apk&rsct=application/vnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-01-11T04:51:34Z&ske=2026-01-11T05:52:20Z&sks=b&skv=2018-11-09&sig=rPR4ZGWzI4cLA0GKXtpMRKEZ6dGAiHHbVnM/%2b95J%2b/o=&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2ODEwODkzNiwibmJmIjoxNzY4MTA3MTM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.T1yB_Z_j7l1TZwfGiZObukOTJ0_8aNmMCMu2XFbR2MI&response-content-disposition=attachment;%20filename=Kelivo_android_1.1.6%2b23_armeabi-v7a.apk&response-content-type=application/vnd.android.package-archive)
 
 **苹果专区**
+*注意：kelivo可在Apple Store搜索下载！*
 
+10dianchat
+v1.0
+
+更新日志：无
+
+[点击下载](https://ykj-eos-dg5-01.eos-dongguan-6.cmecloud.cn/42f459fbebc848a98e54677450b0a646086?response-content-disposition=attachment;%20filename*=UTF-8%27%2710dianchat_%25E6%25AD%25A3%25E5%25BC%258F%25E7%2589%2588%25EF%25BC%2588%25E6%259C%25AA%25E7%25AD%25BE%25E5%2590%258D%25EF%25BC%2589.mobileconfig&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260111T050840Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=9T1UKBIX6OJSR5XN2F2T/20260111/default/s3/aws4_request&t=2&u=1039972746715434672&ot=personal&oi=1039972746715434672&f=FpAA-ZLrpDfvumuh4FaRK_bfpKgNJaR17&ext=eyJ1dCI6MX0=&X-Amz-Signature=fda97b439be6ccb33251bbd9dd4174e8a0c1d2f0f3851fc129738715646612db)
