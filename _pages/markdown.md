@@ -2,7 +2,8 @@
 permalink: /markdown/
 title: "关于"
 toc: false
-author_profile: true
+author_profile: faslse
+classes: wide
 redirect_from: 
   - /md/
   - /markdown.html
