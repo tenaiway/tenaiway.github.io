@@ -18,14 +18,14 @@ v1.0
 
 更新日志：无
 
-[点击下载](https://release-assets.githubusercontent.com/github-production-release-asset/1131979782/f79edb0e-e13a-453e-82cd-7d9bb3879685?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-01-11T05:22:13Z&rscd=attachment;%20filename=10dian-Chat_1.0.0_release.apk.1&rsct=application/octet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-01-11T04:22:12Z&ske=2026-01-11T05:22:13Z&sks=b&skv=2018-11-09&sig=l2v44UFPQITDKKNgaDwczN8gw8yP1dsJ3v4rEchD%2bMw=&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2ODEwNjMxMiwibmJmIjoxNzY4MTA2MDEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bm5pGcCFpZtxT_613mpmIJDRtQ-pFeew11N2zvs4K8Q&response-content-disposition=attachment;%20filename=10dian-Chat_1.0.0_release.apk.1&response-content-type=application/octet-stream)
+[点击下载](https://yun.139.com/shareweb/#/w/i/2su6DM3xJj64x)
 
 10dianapi
 v1.0
 
 更新日志：无
 
-[点击下载](https://release-assets.githubusercontent.com/github-production-release-asset/1131979782/1e71aaf8-a219-4b80-b59d-cb10bf0d29f0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-01-11T05:24:19Z&rscd=attachment;%20filename=10dian-API_1.0.0_release.apk.1&rsct=application/octet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-01-11T04:24:07Z&ske=2026-01-11T05:24:19Z&sks=b&skv=2018-11-09&sig=hWr8Aj65fpEZnIuyQqun9n9ZiAiLJoTXMqZxxTa%2bkt0=&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2ODEwNjIxMCwibmJmIjoxNzY4MTA1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.s4YpPOBNrZ_5mKoF5YznUQgQIWKA9bqr1KUGsU7FYbE&response-content-disposition=attachment;%20filename=10dian-API_1.0.0_release.apk.1&response-content-type=application/octet-stream)
+[点击下载](https://yun.139.com/shareweb/#/w/i/2su6xyAe1Vr6a)
 
 kelivo
 v1.1.6
@@ -36,14 +36,14 @@ v1.1.6
 3:添加了存储管理页面。
 4:添加了支持官方API的内置工具。
 5:添加了对OpenRouter思维签名的支持。
-6:允许列出模型而不需要API键。
+6:允许列出模型而不需要API
 7:增强了聊天记录参考功能，现在包括LLM驱动的对话摘要。
 8:在桌面端聊天区的空白处点击拖拽即可滚动
 9:为移动设备添加了“回车发送”选项。
 10:为桌面版增加了可配置的发送快捷方式。
 11:修复了其他几个已知的错误。
 
-[点击下载](https://release-assets.githubusercontent.com/github-production-release-asset/1046807713/6dd023e8-7ef9-4600-95e5-4b6ddd40fec6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-01-11T05:21:33Z&rscd=attachment;%20filename=Kelivo_android_1.1.6%2b23_arm64-v8a.apk&rsct=application/vnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-01-11T04:20:53Z&ske=2026-01-11T05:21:33Z&sks=b&skv=2018-11-09&sig=vfK/9IbEW0YcjR4kPgMf6Sclt72Dpt73TyzKz7JDB4s=&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2ODEwODI3NiwibmJmIjoxNzY4MTA2NDc2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wCkgWrQn7KIZE6MTXmFntpXJ7Sh3xMGT3WgS-9f4-tE&response-content-disposition=attachment;%20filename=Kelivo_android_1.1.6%2b23_arm64-v8a.apk&response-content-type=application/vnd.android.package-archive)
+[点击下载](https://yun.139.com/shareweb/#/w/i/2su6xVBP61Wb1)
 
 v7a版本，适用于老手机👇
 
@@ -62,13 +62,13 @@ v1.0
 
 更新日志：无
 
-[点击下载](https://ykj-eos-dg5-01.eos-dongguan-6.cmecloud.cn/42f459fbebc848a98e54677450b0a646086?response-content-disposition=attachment;%20filename*=UTF-8%27%2710dianchat_%25E6%25AD%25A3%25E5%25BC%258F%25E7%2589%2588%25EF%25BC%2588%25E6%259C%25AA%25E7%25AD%25BE%25E5%2590%258D%25EF%25BC%2589.mobileconfig&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260111T050840Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=9T1UKBIX6OJSR5XN2F2T/20260111/default/s3/aws4_request&t=2&u=1039972746715434672&ot=personal&oi=1039972746715434672&f=FpAA-ZLrpDfvumuh4FaRK_bfpKgNJaR17&ext=eyJ1dCI6MX0=&X-Amz-Signature=fda97b439be6ccb33251bbd9dd4174e8a0c1d2f0f3851fc129738715646612db)
+[点击下载](https://yun.139.com/shareweb/#/w/i/2su6xvA0KEpfb)
 
 10dianapi
 v1.0
 
 更新日志：无
 
-[点击下载](https://ykj-eos-dg5-01.eos-dongguan-6.cmecloud.cn/1ff7a1c0865e4ac2bdb40467af218288086?response-content-disposition=attachment;%20filename*=UTF-8%27%2710dianAPI_%25E6%25AD%25A3%25E5%25BC%258F%25E7%2589%2588%25EF%25BC%2588%25E6%259C%25AA%25E7%25AD%25BE%25E5%2590%258D%25EF%25BC%2589.mobileconfig&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260111T051625Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=9T1UKBIX6OJSR5XN2F2T/20260111/default/s3/aws4_request&t=2&u=1039972746715434672&ot=personal&oi=1039972746715434672&f=FpN0KMC-AozQx1vXy9HVGobc0HlfcALO0&ext=eyJ1dCI6MX0=&X-Amz-Signature=de3c01264f0d6dc4f7a4c6a2e2484bc596bbfdb6556776e346bbc0a82490eb00)
+[点击下载](https://yun.139.com/shareweb/#/w/i/2su6xYC2pPfp0)
 
 
