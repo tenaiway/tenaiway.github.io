@@ -62,7 +62,13 @@ tips:
 *10点photos* 
 
 10点文生图，密码*10dianai*
-
+<div style="text-align: center; margin: 2em 0;">
+<img src="https://s41.ax1x.com/2026/01/11/pZ0qftH.jpg"
+     alt="profile photo"
+     width="200"
+     height="200"
+     style="object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+</div>
 [点击跳转awa](https://pic.10dian.dpdns.org)
 
 
