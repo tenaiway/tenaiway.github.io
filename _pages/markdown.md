@@ -1,14 +1,14 @@
----
-permalink: /markdown/
+------
+layout: page
 title: "关于"
-toc: false
-author_profile: faslse
-classes: wide
-redirect_from: 
+permalink: /markdown/
+author_profile: false   # 关闭左侧作者侧边栏（包括头像）
+classes: wide           # 让内容全宽 + 居中（两边有空隙）
+toc: false              # 关闭目录（如果不需要）
+redirect_from:
   - /md/
   - /markdown.html
 ---
-
 开发者：10点被甩一万，kk
 
 感谢你对10点ai的支持！
