@@ -8,8 +8,7 @@ redirect_from:
   - /markdown.html
 ---
 
-[wx赞助10点被甩一万]
-(https://s41.ax1x.com/2026/01/11/pZ0bpx0.ipg)
+[wx赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bPx0.jpg)
 
 
 
