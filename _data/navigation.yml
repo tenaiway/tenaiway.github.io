@@ -26,8 +26,11 @@ main:
   - title: "相关应用"
     url: /cv/
     
-  # -title: "CV"
-  #   url: /cv-json/
+  - title: "教程"
+    url: /jiaocheng/
     
   - title: "关于"
     url: /markdown/
+ 
+  
+ 
