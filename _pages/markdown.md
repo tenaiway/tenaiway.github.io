@@ -10,20 +10,7 @@ redirect_from:
 
 开发者：10点被甩一万，kk
 
-[wx赞助10点被甩一万](https://i.111666.best/image/0MxwzDSrtHVwXmVecnNhqB.jpg)
-
-[zfb赞助10点被甩一万](https://i.111666.best/image/RoIJj3WPenDk3DACoV59mY.jpg)
-
-[zfb赞助kk](https://i.111666.best/image/Cj0Oq3ONxpnJ4khHJD17A5.jpg)
-
 感谢你对10点ai的支持！
-
-
-
-
-
-
-
 
 
 欢迎加入我们的QQ群**1061994014**一起交流
