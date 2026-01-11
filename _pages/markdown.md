@@ -10,6 +10,11 @@ redirect_from:
 
 [wx赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bPx0.jpg)
 
+[zfb赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bC2q.jpg)
+
+[zfb赞助kk](https://s41.ax1%20x.com/2026/01/11/pZ0bUJA.jpg)
+
+感谢你对10点ai的支持！
 
 
 
