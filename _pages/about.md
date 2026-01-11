@@ -24,7 +24,7 @@ tips:
 
 主ai聊天网站
 <div style="text-align: center; margin: 2em 0;">
-< img src="https://s41.ax1x.com/2026/01/11/pZ0qASI.jpg"
+<img src="https://s41.ax1x.com/2026/01/11/pZ0qASI.jpg"
      alt="profile photo"
      width="200"
      height="200"
