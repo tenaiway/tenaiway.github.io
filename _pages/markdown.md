@@ -34,7 +34,7 @@ tips：如果对10dianai有什么意见可以私信管理员或者群主哦
      
 
 <div style="text-align: center; margin: 2em 0;">
-< img src="https://i.111666.best/image/85aI8NXOizgSs1lGQmhuAk.jpg"
+<img src="https://i.111666.best/image/85aI8NXOizgSs1lGQmhuAk.jpg"
      alt="profile photo"
      width="200"
      height="200"
