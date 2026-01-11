@@ -2,7 +2,8 @@
 layout: archive
 title: "相关应用"
 permalink: /cv/
-author_profile: true
+author_profile: false
+classes: wide
 redirect_from:
   - /resume
 ---
