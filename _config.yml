@@ -318,3 +318,8 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+    defaults:
+  - scope:
+      path: ""
+    values:
+      author_profile: false
