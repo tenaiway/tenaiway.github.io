@@ -10,11 +10,11 @@ redirect_from:
 
 开发者：10点被甩一万，kk
 
-[wx赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bPx0.jpg)
+[wx赞助10点被甩一万](https://i.111666.best/image/0MxwzDSrtHVwXmVecnNhqB.jpg)
 
-[zfb赞助10点被甩一万](https://s41.ax1x.com/2026/01/11/pZ0bC2q.jpg)
+[zfb赞助10点被甩一万](https://i.111666.best/image/RoIJj3WPenDk3DACoV59mY.jpg)
 
-[zfb赞助kk](https://s41.ax1%20x.com/2026/01/11/pZ0bUJA.jpg)
+[zfb赞助kk](https://i.111666.best/image/Cj0Oq3ONxpnJ4khHJD17A5.jpg)
 
 感谢你对10点ai的支持！
 
