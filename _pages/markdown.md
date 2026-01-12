@@ -19,6 +19,12 @@ redirect_from:
 群里不定时会有抽奖福利^_^
 
 tips：如果对10dianai有什么意见可以私信管理员或者群主哦
+
+某些情况下无法联系请发邮件
+
+(kk)
+
+goway0128@outlook.com 
      
 
 <div style="text-align: center; margin: 2em 0;">
