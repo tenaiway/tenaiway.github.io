@@ -1,13 +1,11 @@
 ---
-layout: page
+layout: archive
 title: "关于"
 permalink: /markdown/
 author_profile: false
 classes: wide
-toc: false
 redirect_from:
-  - /md/
-  - /markdown.html
+  - /resume
 ---
 
 
