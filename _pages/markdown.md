@@ -1,13 +1,14 @@
-
+---
 layout: page
 title: "关于"
 permalink: /markdown/
-author_profile: false      # 关闭左侧作者侧边栏（包括头像）
-classes: wide              # 内容全宽 + 居中（两边有空隙）
-toc: false                 # 关闭目录（如果你不需要）
+author_profile: false
+classes: wide
+toc: false
 redirect_from:
   - /md/
-  - /markdown.html/
+  - /markdown.html
+---
 
 
 开发者：10点被甩一万，kk
