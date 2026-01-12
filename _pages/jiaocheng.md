@@ -7,7 +7,7 @@ classes: wide
 redirect_from:
   - /resume
 ---
-1
+
 ## 对于Kelivo使用10dianapi模型的教程
 
 **帮助您快速在Kelivo应用中使用10dianapi核心功能的完整流程**
@@ -57,7 +57,7 @@ redirect_from:
     </div>
     <div class="gallery-item">
       <img src="https://i.111666.best/image/uGsEwBvEfnBYWMoZt5O4D5.jpg" alt="图片6">
-      <p class="gallery-caption">点击设置（图标很想齿轮）</p>
+      <p class="gallery-caption">点击设置（图标很像齿轮）</p>
     </div>
   </div>
 
