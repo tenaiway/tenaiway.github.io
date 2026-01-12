@@ -4,7 +4,7 @@ title: "关于"
 permalink: /markdown/
 author_profile: false      # 关闭左侧作者侧边栏（包括头像）
 classes: wide              # 内容全宽 + 居中（两边有空隙）
-toc: false                 # 关闭目录（如果不需要）
+toc: true                 # 关闭目录（如果不需要）
 redirect_from:
   - /md/
   - /markdown.html
