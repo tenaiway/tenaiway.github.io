@@ -318,3 +318,9 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+defaults:
+  - scope:
+    path: ""
+    type: pages
+    values:
+      classes: wide    
