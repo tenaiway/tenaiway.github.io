@@ -6,8 +6,9 @@ author_profile: false
 classes: wide
 redirect_from:
   - /resume
-hide_title_underline: true
 ---
+
+{% include base_path %}
 ## 对于Kelivo使用10dianapi模型的教程
 
 **帮助您快速在Kelivo应用中使用10dianapi核心功能的完整流程**
