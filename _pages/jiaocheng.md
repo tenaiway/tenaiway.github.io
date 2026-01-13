@@ -85,20 +85,20 @@ redirect_from:
 </div>
 
 <style>
-  .tutorial-grid-gallery {
+  .tutorial-gallery {
     max-width: 1200px !important;
     margin: 0 auto 4em !important;
     padding: 0 1em !important;
   }
 
-  .tutorial-grid-gallery .grid-row {
+  .tutorial-gallery .gallery-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 3em 5em !important;
+    gap: 3em 5em !important; /* 水平间隙大，中间空旷 */
     margin-bottom: 6em !important;
   }
 
-  .tutorial-grid-gallery .grid-item {
+  .tutorial-gallery .gallery-item {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -106,38 +106,45 @@ redirect_from:
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
   }
 
-  .tutorial-grid-gallery .grid-item img {
+  .tutorial-gallery .gallery-item img {
     width: 100% !important;
     height: auto !important;
-    display: block !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;  /* 完全去掉图片阴影/圆角 */
+    max-height: 550px !important; /* 控制图片最大高度，避免太大 */
+    object-fit: contain !important; /* 保持原比例，不拉伸 */
+    border-radius: 16px !important; /* 圆角 */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important; /* 轻微阴影 */
     margin: 0 !important;
+    display: block !important;
   }
 
-  .tutorial-grid-gallery .caption {
+  .tutorial-gallery .caption {
     margin-top: 1.8em !important;
     margin-bottom: 0 !important;
-    font-size: 1.1em !important;
-    line-height: 1.7 !important;
+    font-size: 1.25em !important; /* 文字加大 */
+    line-height: 1.6 !important;
     text-align: center !important;
-    color: #ddd !important;
+    color: #f0f0f0 !important; /* 更亮可见 */
     background: none !important;
     padding: 0 !important;
   }
 
-  .tutorial-grid-gallery .grid-item.empty {
+  .tutorial-gallery .gallery-item.empty {
     visibility: hidden !important;
   }
 
   @media (max-width: 768px) {
-    .tutorial-grid-gallery .grid-row {
+    .tutorial-gallery .gallery-row {
       grid-template-columns: 1fr 1fr !important;
       gap: 2em 3em !important;
+    }
+    .tutorial-gallery .gallery-item img {
+      max-height: 400px !important; /* 手机上图片稍小 */
+    }
+    .tutorial-gallery .caption {
+      font-size: 1.1em !important;
     }
   }
 </style>
