@@ -94,7 +94,7 @@ redirect_from:
   .tutorial-grid-gallery .grid-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 3em 5em !important; /* 水平间隙更大 */
+    gap: 3em 5em !important;
     margin-bottom: 6em !important;
   }
 
@@ -106,6 +106,7 @@ redirect_from:
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
   }
 
@@ -120,7 +121,7 @@ redirect_from:
     display: block !important;
   }
 
-  .tutorial-grid-gallery .gallery-caption {
+  .tutorial-grid-gallery .caption {
     margin: 1.8em 0 0 0 !important;
     font-size: 1.15em !important;
     line-height: 1.7 !important;
