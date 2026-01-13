@@ -74,21 +74,21 @@ redirect_from:
   <div class="gallery-row">
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-30-09-153_com.psyche.kelivo_1768196935689edit.jpg" alt="步骤9">
-      <p class="gallery-caption">输入刚才在10dianapi创建的令牌里的Key（密钥）</p>
+      <p class="gallery-caption">输入刚才在10dianapi创建的令牌里的Key（密钥），输入10dianapi的网址，后面必须加/v1，v是小写，符号一个都不能少!</p>
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-49-34-093_com.psyche.kelivo_1768197027681edit.jpg" alt="步骤10">
-      <p class="gallery-caption">输入10dianapi的网址，后面必须加/v1，v是小写，符号一个都不能少!</p>
+      <p class="gallery-caption">全部完成后，再点击“模型”</p>
     </div>
   </div>
 
-  <!-- 第六排（只有一张） -->
+  <!-- 第六排 -->
   <div class="gallery-row">
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-49-44-808_com.psyche.kelivo_1768278720513edit.jpg" alt="步骤11">
-      <p class="gallery-caption">全部完成后，再点击“模型”，这时候再点“获取”就会出现模型了，获取以使用吧~</p>
+      <p class="gallery-caption">点击“获取”就会出现模型，获取以使用吧~</p>
     </div>
-    <div class="gallery-item empty"></div> <!-- 占位，保持两列结构 -->
+    <div class="gallery-item empty"></div>
   </div>
 </div>
 
@@ -102,18 +102,15 @@ redirect_from:
   .gallery-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2em 3em;
-    margin-bottom: 4em;
+    gap: 2em 3em; /* 图片之间水平间隙 3em，垂直 2em */
+    margin-bottom: 4em; /* 每排组之间垂直距离 */
   }
 
   .gallery-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255,255,255,0.05);
-    padding: 1em;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    /* 去掉背景、padding、阴影、圆角，只保留图片本身效果 */
   }
 
   .gallery-item img {
@@ -121,7 +118,8 @@ redirect_from:
     height: auto;
     max-height: 400px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* 只给图片加阴影 */
   }
 
   .gallery-caption {
@@ -130,6 +128,8 @@ redirect_from:
     line-height: 1.6;
     text-align: center;
     color: #ddd;
+    background: none; /* 确保文字无背景 */
+    padding: 0; /* 无内边距 */
   }
 
   .gallery-item.empty {
