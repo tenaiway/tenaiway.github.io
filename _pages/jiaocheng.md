@@ -42,7 +42,7 @@ redirect_from:
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-28-59-439_mark.via_1768196576300edit.jpg" alt="步骤4">
-      <p class="gallery-caption">随便输入一个名词，其他的不要点</p>
+      <p class="gallery-caption">输入名称,比如“10dianapi”，其他的不要点</p>
     </div>
   </div>
 
@@ -50,11 +50,11 @@ redirect_from:
   <div class="gallery-row">
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-29-18-921_com.psyche.kelivo_1768196651328edit.jpg" alt="步骤5">
-      <p class="gallery-caption">打开Kelivo, 注册/登录账户点击左上角的三条杠</p>
+      <p class="gallery-caption">打开“Kelivo”, 注册/登录账户后点击左上角的三条杠</p>
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-29-25-754_com.psyche.kelivo_1768196695329edit.jpg" alt="步骤6">
-      <p class="gallery-caption">点击设置 (图标很像齿轮)</p>
+      <p class="gallery-caption">点击“设置” (图标很像齿轮)</p>
     </div>
   </div>
 
@@ -74,11 +74,11 @@ redirect_from:
   <div class="gallery-row">
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-30-09-153_com.psyche.kelivo_1768196935689edit.jpg" alt="步骤9">
-      <p class="gallery-caption">输入刚才在10dianapi创建的令牌里的Key（密钥），输入10dianapi的网址，后面必须加/v1，v是小写，符号一个都不能少!</p>
+      <p class="gallery-caption">输入刚才在10dianapi创建的令牌里的“Key”（密钥）</p>
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-49-34-093_com.psyche.kelivo_1768197027681edit.jpg" alt="步骤10">
-      <p class="gallery-caption">全部完成后，再点击“模型”</p>
+      <p class="gallery-caption">输入10dianapi的网址，后面必须加“/v1”，v是小写，符号一个都不能少!</p>
     </div>
   </div>
 
@@ -86,7 +86,7 @@ redirect_from:
   <div class="gallery-row">
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-49-44-808_com.psyche.kelivo_1768278720513edit.jpg" alt="步骤11">
-      <p class="gallery-caption">点击“获取”就会出现模型，获取以使用吧~</p>
+      <p class="gallery-caption">全部完成后，再点击“模型”，这时候再点“获取”就会出现模型了，获取以使用吧~</p>
     </div>
     <div class="gallery-item empty"></div>
   </div>
@@ -102,34 +102,38 @@ redirect_from:
   .gallery-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2em 3em; /* 图片之间水平间隙 3em，垂直 2em */
-    margin-bottom: 4em; /* 每排组之间垂直距离 */
+    gap: 2.5em 4em; /* 加大水平间隙，让中间更空旷 */
+    margin-bottom: 5em; /* 排与排之间更大距离 */
   }
 
   .gallery-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 去掉背景、padding、阴影、圆角，只保留图片本身效果 */
+    /* 完全去掉背景、内边距、圆角、阴影，让框贴合图片大小 */
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .gallery-item img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 450px; /* 稍加大高度限制，避免图片过小 */
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* 只给图片加阴影 */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25); /* 只给图片加更明显的阴影 */
   }
 
   .gallery-caption {
-    margin-top: 1.2em;
+    margin-top: 1.5em; /* 文字和图片之间距离 */
     font-size: 1.1em;
     line-height: 1.6;
     text-align: center;
     color: #ddd;
-    background: none; /* 确保文字无背景 */
-    padding: 0; /* 无内边距 */
+    background: none; /* 文字无背景 */
+    padding: 0;
   }
 
   .gallery-item.empty {
@@ -139,7 +143,7 @@ redirect_from:
   @media (max-width: 768px) {
     .gallery-row {
       grid-template-columns: 1fr 1fr;
-      gap: 1.5em 2em;
+      gap: 1.8em 2.5em;
     }
   }
 </style>
