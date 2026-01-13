@@ -19,8 +19,6 @@ redirect_from:
 
 3简化的认证管理:集中管理的密钥和权限控制，保障使用安全
 
-
-
 <div class="custom-gallery">
   <!-- 第一排 -->
   <div class="gallery-row">
@@ -42,7 +40,7 @@ redirect_from:
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-28-59-439_mark.via_1768196576300edit.jpg" alt="步骤4">
-      <p class="gallery-caption">随便输入一个词，其他的不要点</p>
+      <p class="gallery-caption">随便输入一个名词，其他的不要点</p>
     </div>
   </div>
 
@@ -96,20 +94,20 @@ redirect_from:
   .custom-gallery {
     max-width: 1100px !important;
     margin: 0 auto 3em !important;
-    padding: 0 1em;
+    padding: 0 1em !important;
   }
 
-  .gallery-row {
+  .custom-gallery .gallery-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 3em 4em !important; /* 水平间隙更大，中间空旷 */
+    gap: 3em 4em !important;
     margin-bottom: 5em !important;
   }
 
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .custom-gallery .gallery-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     background: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -118,17 +116,18 @@ redirect_from:
     box-shadow: none !important;
   }
 
-  .gallery-item img {
+  .custom-gallery .gallery-item img {
     width: 100% !important;
     height: auto !important;
     max-height: 450px !important;
     object-fit: contain !important;
     border-radius: 12px !important;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important; /* 只给图片加阴影 */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important;
     margin: 0 !important;
+    display: block !important;
   }
 
-  .gallery-caption {
+  .custom-gallery .gallery-caption {
     margin-top: 1.5em !important;
     margin-bottom: 0 !important;
     font-size: 1.1em !important;
@@ -139,12 +138,12 @@ redirect_from:
     padding: 0 !important;
   }
 
-  .gallery-item.empty {
+  .custom-gallery .gallery-item.empty {
     visibility: hidden !important;
   }
 
   @media (max-width: 768px) {
-    .gallery-row {
+    .custom-gallery .gallery-row {
       grid-template-columns: 1fr 1fr !important;
       gap: 2em 2.5em !important;
     }
