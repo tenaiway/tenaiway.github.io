@@ -41,20 +41,4 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 
-   /* 全局渐变蓝背景 + 内容区半透明 */
-   body {
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-  background-attachment: fixed;
-  color: #e0e0e0;
-}
-
-.page__content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2em;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-
-.page__inner-wrap {
-  background: transparent;
-}
+   
