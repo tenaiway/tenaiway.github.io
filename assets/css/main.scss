@@ -40,4 +40,32 @@
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
+
+   /* 全局渐变蓝背景 + 内容区半透明 */
+body {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e) !important;
+  background-attachment: fixed !important;
+  color: #e0e0e0 !important;
+}
+
+.page__content {
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 2em !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+.page__inner-wrap {
+  background: transparent !important;
+}
+
+/* 如果你想让侧边栏或菜单也适配，可以加 */
+.sidebar, .masthead {
+  background: transparent !important;
+}
+
+/* 可选：暗模式下文字更亮 */
+a, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
 ;
