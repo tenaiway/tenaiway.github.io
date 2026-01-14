@@ -10,6 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
+
 **安卓专区**
 
 （往下滑是苹果专区）
@@ -68,12 +69,4 @@ v1.0
 更新日志：无
 
 [点击下载](https://yun.139.com/shareweb/#/w/i/2su6xYC2pPfp0)
-
-
-<style>
-  body {
-    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
-    background-attachment: fixed !important;
-  }
-</style>
 
