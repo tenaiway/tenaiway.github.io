@@ -1,16 +1,22 @@
-body {
+/* body {
   background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   background-attachment: fixed;
   color: #e0e0e0;
+} */
+
+/* 临时用浅色测试 */
+body {
+  background: #1a1f35 !important; /* 浅蓝黑，测试用 */
 }
 
 .page__content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2em;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.9) !important; /* 内容区浅白底，提高可读性 */
+  padding: 2em !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+  color: #333 !important; /* 文字黑，确保可见 */
 }
 
 .page__inner-wrap {
-  background: transparent;
+  background: transparent !important;
 }
