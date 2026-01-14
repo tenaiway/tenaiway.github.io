@@ -147,10 +147,3 @@ redirect_from:
     }
   }
 </style>
-
-<style>
-  body {
-    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
-    background-attachment: fixed !important;
-  }
-</style>
