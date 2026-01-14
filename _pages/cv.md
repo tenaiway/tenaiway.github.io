@@ -70,3 +70,10 @@ v1.0
 [点击下载](https://yun.139.com/shareweb/#/w/i/2su6xYC2pPfp0)
 
 
+<style>
+  body {
+    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
+    background-attachment: fixed !important;
+  }
+</style>
+
