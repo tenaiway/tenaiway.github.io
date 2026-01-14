@@ -1,22 +1,26 @@
-/* body {
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-  background-attachment: fixed;
-  color: #e0e0e0;
-} */
-
-/* 临时用浅色测试 */
 body {
-  background: #1a1f35 !important; /* 浅蓝黑，测试用 */
+  background: linear-gradient(to bottom, #1e3c72, #2a5298, #3a6ea5) !important; /* 更亮的科技蓝渐变 */
+  background-attachment: fixed !important;
+  color: #ffffff !important; /* 文字纯白，确保可见 */
 }
 
 .page__content {
-  background: rgba(255, 255, 255, 0.9) !important; /* 内容区浅白底，提高可读性 */
+  background: rgba(255, 255, 255, 0.85) !important; /* 内容区浅白底，半透明 */
   padding: 2em !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
-  color: #333 !important; /* 文字黑，确保可见 */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+  color: #333 !important; /* 内容文字深色，可读性强 */
 }
 
 .page__inner-wrap {
   background: transparent !important;
+}
+
+/* 菜单/侧边栏适配 */
+.masthead, .sidebar {
+  background: transparent !important;
+}
+
+a, h1, h2, h3 {
+  color: #ffffff !important; /* 链接和标题白 */
 }
