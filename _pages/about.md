@@ -71,4 +71,12 @@ tips:
 </div>
 [点击跳转awa](https://pic.10dian.dpdns.org)
 
+<style>
+  body {
+    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
+    background-attachment: fixed !important;
+  }
+</style>
+
+
 
