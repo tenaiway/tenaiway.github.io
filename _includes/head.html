@@ -1,35 +1,74 @@
 <style>
-  /* 全局渐变蓝紫红背景 */
+  <style>
+  /* 全局渐变背景（你想要的深蓝到紫红） */
   body {
     background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
     background-attachment: fixed !important;
     color: #e0e0e0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 
-  /* 内容区透明 + 去边框 */
-  .page__content, main {
+  /* 内容区：去掉背景、阴影、圆角，让文字/图片独立 */
+  .page__content {
     background: transparent !important;
     padding: 1em 0 !important;
-    border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
   }
 
   .page__inner-wrap {
     background: transparent !important;
   }
 
-
-  /* 菜单适配 */
+  /* 修复顶部菜单：加深色背景，避免透明看不清 */
   .masthead {
-    background: rgba(15, 12, 41, 0.9) !important;
+    background: rgba(15, 12, 41, 0.9) !important; /* 深蓝半透明底，与渐变匹配 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
   }
 
+  .masthead__inner-wrap {
+    background: transparent !important;
+  }
+
+  /* 菜单文字/图标颜色调亮 */
+  .masthead a, .masthead__title, .masthead__menu-item {
+    color: #ffffff !important;
+  }
+
+  /* 其他优化 */
+  h1, h2, h3, a {
+    color: #ffffff !important;
+  }
+  p, li {
+    color: #f0f0f0 !important;
+  }
+
+  /* 隐藏标题下横线（如果还有） */
+  .page__title {
+    border-bottom: none !important;
+  }
+  
+  /* 去标题下横线 */
+  .page__title {
+    border-bottom: none !important;
+  }
+
+  /* 菜单栏不挡标题（加大底部间距 + z-index 调整） */
+  .masthead {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 100 !important; /* 菜单在最上层 */
+    margin-bottom: 4em !important; /* 加大菜单底部间距，避免挡标题 */
+    padding-bottom: 1em !important;
+  }
+
+  /* 内容区顶部间距加大，避免被菜单挡 */
+  .page__content {
+    margin-top: 6em !important; /* 顶部间距更大，标题不被菜单挡 */
+  }
 
 </style>
+
 
 
 {% include base_path %}
