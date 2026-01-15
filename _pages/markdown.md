@@ -36,8 +36,19 @@ goway0128@outlook.com
 </div>
 
 <style>
+  /* 测试用：浅蓝到紫色渐变（顶部浅蓝、中间紫、底部深紫） */
   body {
-    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
+    background: linear-gradient(to bottom, #4a90e2, #7b4397, #5e35b1) !important;
     background-attachment: fixed !important;
+  }
+
+  /* 轻微提升文字可见性（可选，如果背景太暗看不清再加） */
+  .page__content p,
+  .page__content li {
+    color: #f8f9fa !important; /* 浅白灰 */
+  }
+
+  h1, h2, h3 {
+    color: #ffffff !important;
   }
 </style>
