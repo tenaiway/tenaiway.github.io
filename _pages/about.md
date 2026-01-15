@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "欢迎来到10dianai仓库^ _ ^"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
