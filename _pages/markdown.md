@@ -34,3 +34,10 @@ goway0128@outlook.com
        height="200"
        style="object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
 </div>
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
+    background-attachment: fixed !important;
+  }
+</style>
