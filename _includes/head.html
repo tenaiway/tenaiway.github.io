@@ -1,49 +1,26 @@
 <style>
-  /* 全局渐变背景（你想要的深蓝到紫红） */
+  /* 全局渐变背景（深蓝到紫红） */
   body {
     background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
     background-attachment: fixed !important;
-    color: #e0e0e0 !important;
   }
 
-  /* 内容区：去掉背景、阴影、圆角，让文字/图片独立 */
-  .page__content {
-    background: transparent !important;
-    padding: 1em 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-  }
-
-  .page__inner-wrap {
-    background: transparent !important;
-  }
-
-  /* 修复顶部菜单：加深色背景，避免透明看不清 */
-  .masthead {
-    background: rgba(15, 12, 41, 0.9) !important; /* 深蓝半透明底，与渐变匹配 */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
-  }
-
-  .masthead__inner-wrap {
-    background: transparent !important;
-  }
-
-  /* 菜单文字/图标颜色调亮 */
-  .masthead a, .masthead__title, .masthead__menu-item {
-    color: #ffffff !important;
-  }
-
-  /* 其他优化 */
-  h1, h2, h3, a {
-    color: #ffffff !important;
-  }
-  p, li {
+  /* 轻微优化文字可见性（避免暗背景看不清） */
+  .page__content, p, li {
     color: #f0f0f0 !important;
   }
 
-  /* 隐藏标题下横线（如果还有） */
-  .page__title {
-    border-bottom: none !important;
+  h1, h2, h3, a {
+    color: #ffffff !important;
   }
+
+  /* 修复底部黑条（让 footer 透明或匹配渐变） */
+  .site-footer, footer {
+    background: transparent !important;
+    border-top: none !important;
+  }
+
+  /* 不要再覆盖 .masthead、.page__content 的 background/padding/box-shadow！ */
+  /* 如果菜单还是透明，加下面这行测试 */
+  /* .masthead { background: rgba(15, 12, 41, 0.9) !important; } */
 </style>
