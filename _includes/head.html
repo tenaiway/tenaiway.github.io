@@ -1,33 +1,51 @@
-<!-- 临时注释全局 CSS，避免乱
 <style>
- <style>
-  /* 全局渐变背景（深蓝到紫红） */
+  /* 全局渐变蓝紫红背景 */
   body {
     background: linear-gradient(to bottom, #0f0c29, #3a1c5c, #4a148c) !important;
     background-attachment: fixed !important;
+    color: #e0e0e0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* 轻微优化文字可见性（避免暗背景看不清） */
-  .page__content, p, li {
-    color: #f0f0f0 !important;
+  /* 内容区透明 + 去边框 */
+  .page__content, main {
+    background: transparent !important;
+    padding: 1em 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
   }
 
+  .page__inner-wrap {
+    background: transparent !important;
+  }
+
+  /* 彻底去底部黑边（footer） */
+  .site-footer, footer, .footer {
+    background: transparent !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    padding: 1em 0 !important;
+    margin-top: 0 !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* 菜单适配 */
+  .masthead {
+    background: rgba(15, 12, 41, 0.9) !important;
+  }
+
+  /* 文字优化 */
   h1, h2, h3, a {
     color: #ffffff !important;
   }
-
-  /* 修复底部黑条（让 footer 透明或匹配渐变） */
-  .site-footer, footer {
-    background: transparent !important;
-    border-top: none !important;
+  p, li {
+    color: #f0f0f0 !important;
   }
+</style>
 
-  /* 不要再覆盖 .masthead、.page__content 的 background/padding/box-shadow！ */
-  /* 如果菜单还是透明，加下面这行测试 */
-  /* .masthead { background: rgba(15, 12, 41, 0.9) !important; } */
-</style>
-</style>
--->
 {% include base_path %}
 
 <meta charset="utf-8">
