@@ -153,52 +153,42 @@ redirect_from:
     background-attachment: fixed !important;
   }
 </style>
-<!-- 自动滑动淡入：文字 + 图片每次向上滑动都触发 -->
+
+<!-- 极简自动滑动淡入测试：只向上滑动触发，文字 + 图片都动 -->
 
 <style>
   html { scroll-behavior: smooth; }
 
-  .auto-slide {
+  [data-slide] {
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1s ease, transform 1s ease;
   }
 
-  .auto-slide.visible {
+  [data-slide].visible {
     opacity: 1;
     transform: translateY(0);
   }
 </style>
 
 <script>
-let lastScroll = window.scrollY || 0;
-
 document.addEventListener("DOMContentLoaded", () => {
-  // 自动选常见元素
-  const elements = document.querySelectorAll("h1, h2, h3, p, li, div, img");
+  // 自动选所有标题、段落、列表、图片容器
+  const els = document.querySelectorAll("h1, h2, h3, p, li, div, section, img");
 
-  const observer = new IntersectionObserver((entries) => {
-    const currentScroll = window.scrollY || 0;
-
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        if (currentScroll < lastScroll) {
-          // 向上滚动：重新动画
-          entry.target.classList.remove("visible");
-          void entry.target.offsetWidth;
-          entry.target.classList.add("visible");
-        } else {
-          // 向下滚动：直接显示
-          entry.target.classList.add("visible");
-        }
+        // 向上滚动时重新动画（简单版：直接重置）
+        entry.target.classList.remove("visible");
+        entry.target.offsetWidth; // 重绘
+        entry.target.classList.add("visible");
       }
     });
+  }, { threshold: 0.1 });
 
-    lastScroll = currentScroll;
-  }, { threshold: 0.2 });
-
-  elements.forEach(el => {
-    el.classList.add("auto-slide");
+  els.forEach(el => {
+    el.setAttribute("data-slide", ""); // 自动加属性触发
     observer.observe(el);
   });
 });
