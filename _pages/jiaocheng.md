@@ -154,42 +154,31 @@ redirect_from:
   }
 </style>
 
-<!-- 极简自动滑动淡入测试：只向上滑动触发，文字 + 图片都动 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
 
 <style>
-  html { scroll-behavior: smooth; }
-
-  [data-slide] {
+  /* 滑动淡入效果 */
+  h1, h2, p, .custom-gallery {
     opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
   }
 
-  [data-slide].visible {
+  h1.visible, h2.visible, p.visible, .custom-gallery.visible {
     opacity: 1;
     transform: translateY(0);
   }
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // 自动选所有标题、段落、列表、图片容器
-  const els = document.querySelectorAll("h1, h2, h3, p, li, div, section, img");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // 向上滚动时重新动画（简单版：直接重置）
-        entry.target.classList.remove("visible");
-        entry.target.offsetWidth; // 重绘
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.1 });
-
-  els.forEach(el => {
-    el.setAttribute("data-slide", ""); // 自动加属性触发
-    observer.observe(el);
-  });
-});
-</script>
