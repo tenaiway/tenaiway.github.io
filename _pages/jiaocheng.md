@@ -153,7 +153,7 @@ redirect_from:
     background-attachment: fixed !important;
   }
 </style>
-<!-- 测试滑动效果：每次滚动到都重新淡入 + 向上滑动 -->
+<!-- 安全测试滑动效果：每次滚动到都淡入 + 向上滑动 -->
 
 <style>
   /* 平滑滚动 */
@@ -161,57 +161,38 @@ redirect_from:
     scroll-behavior: smooth;
   }
 
-  /* 动画基础类 */
+  /* 动画类 */
   .slide-up-fade {
     opacity: 0;
-    transform: translateY(60px); /* 从下 60px 向上滑动 */
+    transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
-  /* 可见时触发动画（每次进入视口都执行） */
   .slide-up-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* 延迟出现（多个块依次动画） */
-  .slide-up-fade:nth-child(1) { transition-delay: 0.1s; }
-  .slide-up-fade:nth-child(2) { transition-delay: 0.3s; }
-  .slide-up-fade:nth-child(3) { transition-delay: 0.5s; }
-  .slide-up-fade:nth-child(4) { transition-delay: 0.7s; }
-  .slide-up-fade:nth-child(5) { transition-delay: 0.9s; }
-
-  /* 应用到具体元素 */
-  h1, h2, h3, p, .custom-gallery, .related-item, section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.9s ease-out;
-  }
-
-  h1.visible, h2.visible, h3.visible, p.visible, .custom-gallery.visible, .related-item.visible, section.visible {
     opacity: 1;
     transform: translateY(0);
   }
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("h1, h2, h3, p, .custom-gallery, .related-item, section");
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          // 每次进入视口都重新触发动画（移除 visible 后再加回）
+          // 每次进入视口都重新触发
           entry.target.classList.remove("visible");
-          void entry.target.offsetWidth; // 强制重绘，让 transition 重新触发
+          entry.target.offsetWidth; // 强制重绘
           entry.target.classList.add("visible");
         } else {
-          // 离开视口时移除 visible（下次进入再动画）
           entry.target.classList.remove("visible");
         }
       });
-    }, { threshold: 0.1 }); // 10% 进入视口就触发
+    }, { threshold: 0.1 });
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach(function (el) {
+      observer.observe(el);
+    });
   });
 </script>
