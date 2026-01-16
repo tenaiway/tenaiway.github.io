@@ -154,60 +154,30 @@ redirect_from:
   }
 </style>
 
-<!-- 自动滑动淡入效果：无需手动加 class，每次滚动到都从下淡入 -->
-
-<style>
-  /* 平滑滚动 */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* 动画基础类 */
-  .auto-slide-up {
-    opacity: 0;
-    transform: translateY(60px); /* 从下方 60px 向上滑动 */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-
-  .auto-slide-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* 延迟让多个元素依次出现 */
-  .auto-slide-up:nth-child(odd) { transition-delay: 0.1s; }
-  .auto-slide-up:nth-child(even) { transition-delay: 0.4s; }
-</style>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // 自动选择常见元素：标题、段落、列表项、图片容器、section
-    const elements = document.querySelectorAll("h1, h2, h3, p, li, .custom-gallery, section, .gallery-row, div[style*='text-align'], img");
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // 每次进入视口都重新触发动画
-          entry.target.classList.remove("auto-slide-up-visible");
-          entry.target.offsetWidth; // 强制浏览器重绘，让 transition 重新开始
-          entry.target.classList.add("auto-slide-up-visible");
-        } else {
-          entry.target.classList.remove("auto-slide-up-visible");
+          entry.target.classList.add("visible");
         }
       });
-    }, { threshold: 0.15 }); // 15% 进入视口触发（可调小点更灵敏）
+    }, { threshold: 0.1 });
 
-    // 自动给选中的元素加动画类
-    elements.forEach(function (el) {
-      el.classList.add("auto-slide-up");
-      observer.observe(el);
-    });
+    elements.forEach(el => observer.observe(el));
   });
 </script>
 
 <style>
-  /* 可见状态 */
-  .auto-slide-up-visible {
+  /* 滑动淡入效果 */
+  h1, h2, p, .custom-gallery {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  h1.visible, h2.visible, p.visible, .custom-gallery.visible {
     opacity: 1;
     transform: translateY(0);
   }
