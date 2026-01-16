@@ -154,41 +154,41 @@ redirect_from:
   }
 </style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // 每次进入视口都重新触发动画
-          entry.target.classList.remove("visible");
-          // 强制浏览器重绘，让 transition 能重新开始
-          void entry.target.offsetWidth;
-          entry.target.classList.add("visible");
-        } else {
-          // 离开视口时移除类，下次进入再动画
-          entry.target.classList.remove("visible");
-        }
-      });
-    }, { threshold: 0.1 });
-
-    elements.forEach((el) => {
-      observer.observe(el);
-    });
-  });
-</script>
+<!-- 自动滑动淡入：文字 + 图片每次滚动到都从下淡入 -->
 
 <style>
-  /* 滑动淡入效果 */
-  h1, h2, p, .custom-gallery {
+  html { scroll-behavior: smooth; }
+
+  .auto-slide {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
-  h1.visible, h2.visible, p.visible, .custom-gallery.visible {
+  .auto-slide.visible {
     opacity: 1;
     transform: translateY(0);
   }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const els = document.querySelectorAll("h1, h2, p, li, .custom-gallery");
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("visible");
+        void entry.target.offsetWidth;
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  els.forEach(el => {
+    el.classList.add("auto-slide");
+    obs.observe(el);
+  });
+});
+</script>
