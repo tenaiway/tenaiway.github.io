@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>10dian-AI</title>
+
+<style>
+:root{
+  --bg-main:#f4f8ff;
+  --section-bg:#ffffff;
+  --text-main:#0f172a;
+  --text-secondary:#475569;
+  --primary:#2563eb;
+  --accent:#38bdf8;
+  --border-soft:rgba(0,0,0,.06);
+}
+
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:var(--bg-main);
+  color:var(--text-main);
+  line-height:1.55;
+  overflow-x:hidden;
+}
+
+section{
+  padding:4rem 1.5rem;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+@media (min-width:1440px){
+  .container{ max-width:1200px; }
+}
+
+@media (max-width:640px){
+  .block-title{ font-size:1.6rem; }
+  .block-subtitle{ font-size:1rem; }
+  .card{ padding:1.4rem; }
+}
+
+/* Animations */
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Hero */
+.hero{
+  padding-top:5rem;
+  text-align:center;
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  z-index:-1;
+  transform:translateZ(-1px) scale(2);
+  transform-origin:0 0;
+}
+
+.hero-content{
+  transform:translateZ(0);
+  z-index:2;
+}
+
+.logo-text{
+  font-size:3.2rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#7dd3fc,#60a5fa,#7dd3fc);
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:1.2rem;
+  opacity:0;
+  transform:translateY(8px);
+  animation:fadeUp 0.7s ease forwards, gradientMove 12s linear infinite;
+}
+
+.hero h1{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:.6rem;
+  opacity:0;
+  transform:translateY(8px);
+}
+
+.hero p{
+  font-size:1.15rem;
+  color:var(--text-secondary);
+  max-width:720px;
+  margin:0 auto;
+  opacity:0;
+  transform:translateY(8px);
+}
+
+/* 板块容器添加视差效果 */
+.parallax-section{
+  position:relative;
+  transform-style:preserve-3d;
+  perspective:1px;
+}
+
+.parallax-element{
+  transform:translateZ(-0.5px) scale(1.5);
+}
+
+.parallax-element.reverse{
+  transform:translateZ(-1px) scale(2);
+}
+
+.parallax-element.normal{
+  transform:translateZ(0);
+}
+
+/* Titles */
+.block-title{
+  font-size:1.85rem;
+  font-weight:650;
+  margin-bottom:.6rem;
+  opacity:0;
+  transform:translateY(12px);
+  text-align:center;
+}
+
+.block-subtitle{
+  font-size:1.1rem;
+  color:var(--text-secondary);
+  max-width:860px;
+  opacity:0;
+  transform:translateY(12px);
+  margin-bottom:2rem;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Grid / Card */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.6rem;
+}
+
+.grid-4{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.6rem;
+}
+
+@media (max-width:1024px){
+  .grid-4{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:640px){
+  .grid-4{
+    grid-template-columns:1fr;
+  }
+}
+
+.card{
+  background:var(--section-bg);
+  border:1px solid var(--border-soft);
+  border-radius:14px;
+  padding:1.8rem;
+  opacity:0;
+  transform:translateY(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position:relative;
+  z-index:1;
+}
+
+.card h3{
+  font-size:1.15rem;
+  margin-bottom:.4rem;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+
+.card p{
+  font-size:.95rem;
+  color:var(--text-secondary);
+  margin-bottom:1rem;
+}
+
+/* Card hover effect */
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 24px rgba(56,189,248,0.25);
+}
+
+/* Product Card Specific */
+.product-card{
+  text-align:center;
+  padding:2rem 1.5rem;
+}
+
+.product-card .icon{
+  width:60px;
+  height:60px;
+  margin:0 auto 1rem;
+  background:linear-gradient(135deg, var(--accent), var(--primary));
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.product-card .icon svg{
+  width:32px;
+  height:32px;
+  color:#fff;
+}
+
+.product-card h3{
+  font-size:1.3rem;
+  margin-bottom:0.8rem;
+  justify-content:center;
+}
+
+.product-card p{
+  font-size:.95rem;
+  color:var(--text-secondary);
+  margin-bottom:1.2rem;
+  min-height:60px;
+}
+
+.product-card .btn{
+  display:inline-block;
+  padding:0.7rem 1.5rem;
+  background:linear-gradient(135deg, var(--primary), var(--accent));
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:500;
+  font-size:0.95rem;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(37,99,235,0.35);
+}
+
+.product-card .btn.disabled{
+  background:linear-gradient(135deg, #94a3b8, #64748b);
+  cursor:default;
+  pointer-events:none;
+}
+
+.product-card .coming-soon{
+  display:inline-block;
+  padding:0.5rem 1rem;
+  background:#f1f5f9;
+  color:var(--text-secondary);
+  border-radius:8px;
+  font-size:0.85rem;
+  font-weight:500;
+}
+
+/* Community */
+.community{
+  background:var(--section-bg);
+  border-top:1px solid var(--border-soft);
+  border-bottom:1px solid var(--border-soft);
+  text-align:center;
+  padding:3rem 1.5rem;
+  position:relative;
+  transform-style:preserve-3d;
+  perspective:1px;
+}
+
+.community::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+  z-index:-1;
+  transform:translateZ(-0.5px) scale(1.5);
+}
+
+.community h2{
+  font-size:1.9rem;
+  margin-bottom:.8rem;
+  transform:translateZ(0);
+}
+
+.community p{
+  font-size:1.1rem;
+  color:var(--text-secondary);
+  transform:translateZ(0);
+}
+
+.group-id{
+  margin-top:1rem;
+  font-size:1.4rem;
+  font-weight:600;
+  color:var(--primary);
+  transform:translateZ(0);
+}
+
+footer{
+  padding:3rem 1.5rem;
+  text-align:center;
+  font-size:.85rem;
+  color:var(--text-secondary);
+  position:relative;
+  transform-style:preserve-3d;
+  perspective:1px;
+}
+
+.footer-content{
+  transform:translateZ(0);
+}
+
+/* 视差效果在移动设备上的适配 */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 80vh;
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero::before {
+    transform: translateZ(-1px) scale(1.5);
+  }
+  
+  .parallax-element {
+    transform: translateZ(0) scale(1);
+  }
+  
+  .parallax-element.reverse {
+    transform: translateZ(0) scale(1);
+  }
+  
+  .community::before {
+    transform: translateZ(-0.3px) scale(1.3);
+  }
+  
+  .parallax-section,
+  .community,
+  footer {
+    transform-style: flat;
+    perspective: none;
+  }
+  
+  .product-card p{
+    min-height:auto;
+  }
+}
+
+/* 高性能设备增强体验 */
+@media (min-width: 769px) and (min-height: 600px) {
+  .hero {
+    height: 100vh;
+  }
+  
+  .parallax-section,
+  .community,
+  footer {
+    transform-style: preserve-3d;
+    perspective: 1px;
+  }
+  
+  .parallax-element {
+    transform: translateZ(-0.5px) scale(1.5);
+  }
+  
+  .parallax-element.reverse {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  .parallax-element.normal {
+    transform: translateZ(0);
+  }
+}
+
+/* 降低动画效果的设备适配 */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .parallax-element,
+  .community::before {
+    transform: translateZ(0) scale(1);
+    animation: none;
+  }
+  
+  .parallax-section,
+  .community,
+  footer {
+    transform-style: flat;
+    perspective: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-content container">
+    <div class="logo-text">10dian-AI</div>
+    <h1>一站式 AI 服务生态平台</h1>
+    <p>为开发者与用户提供 API 接口、智能对话、文件处理、图像生成等全方位 AI 能力。</p>
+  </div>
+</section>
+
+<!-- 产品板块 -->
+<section class="parallax-section">
+  <div class="parallax-element reverse"></div>
+  <div class="container parallax-element normal">
+    <div class="block-title">我们的产品与服务</div>
+    <div class="block-subtitle">
+      探索 10dian-AI 生态系统，满足您不同场景下的 AI 需求
+    </div>
+    <div class="grid-4">
+      <!-- 10dian-API -->
+      <div class="card product-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3>10dian-API</h3>
+        <p>统一、稳定、高性能的 AI API 服务，支持 OpenAI、Claude、Gemini 等主流模型一站式调用。</p>
+        <a href="https://api.10dian-ai.top" target="_blank" class="btn">立即访问</a>
+      </div>
+      
+      <!-- 10dian-Chat -->
+      <div class="card product-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>10dian-Chat</h3>
+        <p>智能 AI 对话平台，支持多模型切换，提供流畅的聊天体验，满足日常问答与创作需求。</p>
+        <a href="https://chat.10dian-ai.top" target="_blank" class="btn">立即访问</a>
+      </div>
+      
+      <!-- 10dian-File -->
+      <div class="card product-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3>10dian-File</h3>
+        <p>AI 驱动的智能文件处理平台，支持文档解析、格式转换、内容提取等多种文件操作。</p>
+        <a href="https://bp.10dian-ai.top" target="_blank" class="btn">立即访问</a>
+      </div>
+      
+      <!-- 10dian-Pic -->
+      <div class="card product-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <h3>10dian-Pic</h3>
+        <p>AI 图像生成与处理平台，支持文生图、图像编辑、风格转换等创意图像功能。</p>
+        <span class="coming-soon">🚀 即将上线</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 社区 -->
+<section class="community">
+  <div class="container">
+    <h2>加入我们的交流群</h2>
+    <p>交流 AI 使用经验，获取最新平台动态与技术支持</p>
+    <div class="group-id">QQ群：1061994014</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content container">
+    © 2026 10dian-AI · Your AI Partner
+  </div>
+</footer>
+
+<script>
+// IntersectionObserver 动画触发
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.animation='fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) forwards';
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.3});
+
+document.querySelectorAll('.block-title, .block-subtitle, .card, .logo-text, .hero h1, .hero p').forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
