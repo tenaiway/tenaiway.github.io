@@ -153,57 +153,53 @@ redirect_from:
     background-attachment: fixed !important;
   }
 </style>
-
-<script>
-  let lastScrollTop = 0;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // 自动选择所有要动画的元素（标题、段落、列表、图片网格）
-    const elements = document.querySelectorAll("h1, h2, p, li, .custom-gallery");
-
-    const observer = new IntersectionObserver(function(entries) {
-      const currentScroll = window.scrollY || document.documentElement.scrollTop;
-
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          // 只在向上滚动（从下方进入）时重新触发动画
-          if (currentScroll < lastScrollTop) {
-            // 向上滑动：重置状态 → 强制重绘 → 重新动画
-            entry.target.classList.remove("visible");
-            void entry.target.offsetWidth; // 关键：强制浏览器重绘，让 transition 重新开始
-            entry.target.classList.add("visible");
-          } else {
-            // 向下滚动进入：直接显示（不动画）
-            entry.target.classList.add("visible");
-          }
-        }
-        // 注意：不移除 visible，让向下离开时保持显示状态
-      });
-
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    }, { threshold: 0.15 }); // 15% 进入视口触发，可调小点更灵敏
-
-    elements.forEach(function(el) {
-      el.classList.add("auto-slide"); // 自动加动画类
-      observer.observe(el);
-    });
-  });
-</script>
+<!-- 自动滑动淡入：文字 + 图片每次向上滑动都触发 -->
 
 <style>
-  /* 动画基础 */
+  html { scroll-behavior: smooth; }
+
   .auto-slide {
     opacity: 0;
-    transform: translateY(50px); /* 从下方 50px 向上滑动 */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    transform: translateY(60px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
   }
 
   .auto-slide.visible {
     opacity: 1;
     transform: translateY(0);
   }
-
-  /* 让多个元素依次出现（可选） */
-  .auto-slide:nth-child(odd) { transition-delay: 0.2s; }
-  .auto-slide:nth-child(even) { transition-delay: 0.4s; }
 </style>
+
+<script>
+let lastScroll = window.scrollY || 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 自动选常见元素
+  const elements = document.querySelectorAll("h1, h2, h3, p, li, div, img");
+
+  const observer = new IntersectionObserver((entries) => {
+    const currentScroll = window.scrollY || 0;
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (currentScroll < lastScroll) {
+          // 向上滚动：重新动画
+          entry.target.classList.remove("visible");
+          void entry.target.offsetWidth;
+          entry.target.classList.add("visible");
+        } else {
+          // 向下滚动：直接显示
+          entry.target.classList.add("visible");
+        }
+      }
+    });
+
+    lastScroll = currentScroll;
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => {
+    el.classList.add("auto-slide");
+    observer.observe(el);
+  });
+});
+</script>
