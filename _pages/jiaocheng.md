@@ -42,7 +42,7 @@ redirect_from:
     </div>
     <div class="gallery-item">
       <img src="/images/Screenshot_2026-01-12-13-28-59-439_mark.via_1768196576300edit.jpg" alt="步骤4">
-      <p class="gallery-caption">随便输入一个名词，其他的不要点</p>
+      <p class="gallery-caption">输入名称，其他的不要点</p>
     </div>
   </div>
 
@@ -153,3 +153,62 @@ redirect_from:
     background-attachment: fixed !important;
   }
 </style>
+
+<!-- 测试滑动效果：从下淡入 + 向上滑动 -->
+
+<style>
+  /* 平滑滚动 */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 动画基础类 */
+  .slide-up-fade {
+    opacity: 0;
+    transform: translateY(60px); /* 从下 60px 向上滑动 */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .slide-up-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 延迟出现（让多个块依次动画） */
+  .slide-up-fade:nth-child(1) { transition-delay: 0.1s; }
+  .slide-up-fade:nth-child(2) { transition-delay: 0.3s; }
+  .slide-up-fade:nth-child(3) { transition-delay: 0.5s; }
+  .slide-up-fade:nth-child(4) { transition-delay: 0.7s; }
+  .slide-up-fade:nth-child(5) { transition-delay: 0.9s; }
+
+  /* 应用到具体元素（示例：标题、段落、图片网格） */
+  h1, h2, h3, p, .gallery-row, .related-item, section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+  }
+
+  h1.visible, h2.visible, h3.visible, p.visible, .gallery-row.visible, .related-item.visible, section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // 检测元素进入视口时触发动画
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          // observer.unobserve(entry.target); // 可选：只执行一次
+        }
+      });
+    }, { threshold: 0.1 }); // 10% 进入视口就触发
+
+    // 选择要动画的元素
+    document.querySelectorAll("h1, h2, h3, p, .custom-gallery, .related-item, section").forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
