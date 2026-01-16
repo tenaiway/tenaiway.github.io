@@ -157,15 +157,25 @@ redirect_from:
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // 每次进入视口都重新触发动画
+          entry.target.classList.remove("visible");
+          // 强制浏览器重绘，让 transition 能重新开始
+          void entry.target.offsetWidth;
           entry.target.classList.add("visible");
+        } else {
+          // 离开视口时移除类，下次进入再动画
+          entry.target.classList.remove("visible");
         }
       });
     }, { threshold: 0.1 });
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach((el) => {
+      observer.observe(el);
+    });
   });
 </script>
 
