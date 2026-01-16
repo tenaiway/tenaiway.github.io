@@ -154,15 +154,15 @@ redirect_from:
   }
 </style>
 
-<!-- 自动滑动淡入：文字 + 图片每次滚动到都从下淡入 -->
+<!-- 滑动淡入动画：只在向上滚动（从下方进入）时触发，向下滚动不重置 -->
 
 <style>
   html { scroll-behavior: smooth; }
 
   .auto-slide {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(50px); /* 从下方滑入 */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
   }
 
   .auto-slide.visible {
@@ -172,23 +172,37 @@ redirect_from:
 </style>
 
 <script>
+let lastScrollTop = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
-  const els = document.querySelectorAll("h1, h2, p, li, .custom-gallery");
-  const obs = new IntersectionObserver((entries) => {
+  const elements = document.querySelectorAll("h1, h2, p, li, .custom-gallery");
+
+  const observer = new IntersectionObserver((entries) => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.remove("visible");
-        void entry.target.offsetWidth;
-        entry.target.classList.add("visible");
+        // 向上滚动（scrollTop < lastScrollTop）且进入视口时触发
+        if (scrollTop < lastScrollTop) {
+          entry.target.classList.remove("visible");
+          void entry.target.offsetWidth; // 重绘
+          entry.target.classList.add("visible");
+        } else {
+          // 向下滚动进入时，直接显示（不动画）
+          entry.target.classList.add("visible");
+        }
       } else {
-        entry.target.classList.remove("visible");
+        // 离开视口时不移除 visible（向下离开保持显示）
+        // 只在必要时移除（这里不移除，让它保持）
       }
     });
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 更新滚动位置
   }, { threshold: 0.2 });
 
-  els.forEach(el => {
+  elements.forEach((el) => {
     el.classList.add("auto-slide");
-    obs.observe(el);
+    observer.observe(el);
   });
 });
 </script>
