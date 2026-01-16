@@ -153,7 +153,8 @@ redirect_from:
     background-attachment: fixed !important;
   }
 </style>
-<!-- 安全测试滑动效果：每次滚动到都淡入 + 向上滑动 -->
+
+<!-- 测试滑动效果：文字 + 图片都从下淡入，每次滚动到都重新触发 -->
 
 <style>
   /* 平滑滚动 */
@@ -161,38 +162,55 @@ redirect_from:
     scroll-behavior: smooth;
   }
 
-  /* 动画类 */
+  /* 动画基础类（从下淡入 + 向上滑动） */
   .slide-up-fade {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(50px); /* 从下方 50px 向上滑动 */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
   }
 
   .slide-up-fade.visible {
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* 延迟出现，让多个元素依次动画 */
+  .slide-up-fade:nth-child(1) { transition-delay: 0.1s; }
+  .slide-up-fade:nth-child(2) { transition-delay: 0.3s; }
+  .slide-up-fade:nth-child(3) { transition-delay: 0.5s; }
+  .slide-up-fade:nth-child(4) { transition-delay: 0.7s; }
+  .slide-up-fade:nth-child(5) { transition-delay: 0.9s; }
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll("h1, h2, p, .custom-gallery");
+  document.addEventListener("DOMContentLoaded", function() {
+    // 选择所有要动画的元素：标题、段落、列表项、图片网格
+    const elements = document.querySelectorAll("h1, h2, h3, p, li, .custom-gallery, section");
 
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          // 每次进入视口都重新触发
-          entry.target.classList.remove("visible");
-          entry.target.offsetWidth; // 强制重绘
-          entry.target.classList.add("visible");
+          // 每次进入视口都重新触发动画
+          entry.target.classList.remove("slide-up-fade-visible"); // 先移除类
+          entry.target.offsetWidth; // 强制浏览器重绘
+          entry.target.classList.add("slide-up-fade-visible");   // 再加类触发
         } else {
-          entry.target.classList.remove("visible");
+          entry.target.classList.remove("slide-up-fade-visible");
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 }); // 15% 进入视口就触发（可调 0.1~0.3）
 
-    elements.forEach(function (el) {
+    elements.forEach(function(el) {
+      el.classList.add("slide-up-fade"); // 给所有选中的元素加动画类
       observer.observe(el);
     });
   });
 </script>
+
+<style>
+  /* 动画可见状态 */
+  .slide-up-fade-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
